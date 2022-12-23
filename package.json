@@ -1,5 +1,5 @@
 {
-  "name": "conventional-committer",
+  "name": "committer",
   "version": "0.3.0",
   "description": "Commit manager",
   "main": "dist/src/index.js",
