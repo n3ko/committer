@@ -20,17 +20,17 @@ export default class App {
     const scope: string =
       answers.scope === "" ? answers.scope : `(${answers.scope})`;
 
+    // add issue if given
+    const issue = answers.issue
+      ? ` (${(answers.issue.match(/^[1-9]*$/) ? "#" : "") + answers.issue})`
+      : "";
+
     // add description and emoji
-    msg = `${answers.type}${scope}: ${answers.description} ${answers.emoji}`;
+    msg = `${answers.type}${scope}: ${answers.description}${issue} ${answers.emoji}`;
 
     // append body if it exists.
     if (answers.body !== "") {
       msg = `${msg}\n\n${answers.body}`;
-    }
-
-    // add issue if given
-    if (answers.issue !== "") {
-      msg = `${msg} #${answers.issue}`;
     }
 
     // trim whitespace.
