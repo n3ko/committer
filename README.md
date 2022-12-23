@@ -25,6 +25,20 @@ Emojis come from [gitmoji](https://gitmoji.carloscuesta.me/) and outline the com
 
 ## Install
 
+### Install from git
+
+```
+git clone git@github.com:n3ko/committer.git
+cd committer
+pnpm i && pnpm build && pnpm link --global
+```
+
+### Install from npm
+
+📝 `TODO`
+
+### Install the original
+
 ```
 npm install -g conventional-committer
 ```
