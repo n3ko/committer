@@ -56,7 +56,7 @@ export class CLI {
         filter: (e: string) => e
       }
     ];
-    if (!process.env.COMMITER_NO_SCOPE)
+    if (process.env.COMMITER_SCOPE)
       questions.push({
         type: "input",
         name: "scope",
